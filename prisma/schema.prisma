@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model players {
+  id Int @id @map("_id")
+  pid Int
+  imgsrc String
+  name String
+  season String
+  LM Int
+  LW Int
+  ovr Int
+  pay Int
+  height Int
+  weight Int
+  physical String
+  skillmove String
+  mainfoot String
+  subfoot Int
+  nation String
+  trait String[]
+  sprintspeed Int
+  acceleration Int
+  finishing Int
+  shotpower Int
+  longshots Int
+  positioning Int 
+  volleys Int
+  penalties Int 
+  shortpassing Int 
+  vision Int
+  crossing Int 
+  longpassing Int 
+  freekickaccuracy Int 
+  curve Int
+  dribbling Int 
+  ballcontrol Int 
+  agility Int
+  balance Int
+  reactions Int 
+  marking Int
+  standingtackle Int 
+  interceptions Int
+  headingaccuracy Int 
+  slidingtackle Int
+  strength Int
+  stamina Int
+  aggression Int 
+  jumping Int
+  composure Int 
+  gkdiving Int
+  gkhandling Int 
+  gkkicking Int
+  gkreflexes Int 
+  gkpositioning Int
+  club String[]
+  CDM Int
+  CM Int
+  RM Int
+  ST Int
+  RB Int
+  GK Int
+  CAM Int
+  CF Int
+  CB Int
+  LB Int
+  RW Int
+  RWB Int
+  LWB Int
+  RF Int
+  LF Int
+  SW Int 
+  simplayers Int[]
+  bp1 Int?
+  bp2 Int?
+  bp3 Int?
+  bp4 Int?
+  bp5 Int?
+  bp6 Int?
+  bp7 Int?
+  bp8 Int?
+  bp9 Int?
+  bp10 Int?
+}
+
+model teamxpid {
+  id Int @id @map("_id")
+  pids Int[]
+  category String
+  type String
+  name String
+  ability Json
+}
+
+model recommend {
+  id String @id @map("_id")
+  tag String
+  order Int
+  categories String
+  players Json
+}
