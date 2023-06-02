@@ -7,7 +7,7 @@ import { getWindowWidth } from "~/utils/cssfunction";
 
 export default function TabPanels({ recommends }: { recommends: recommend[] }) {
   const slidesPerView = getWindowWidth() > 640 ? 7.5 : 3.5;
-  const profileList = (recommend: recommend) =>
+  const profileList = (recommend: recommend, idx: number) =>
     recommend["players"]
       .sort((pre, next) => {
         return (
@@ -21,14 +21,16 @@ export default function TabPanels({ recommends }: { recommends: recommend[] }) {
           player={player}
           isRole={player["role"]}
           isSwiper={true}
+          isLaze={idx === 0}
         />
       ));
-  const panels = recommends.map((recommend) => (
+  const panels = recommends.map((recommend, idx) => (
     <Tab.Panel key={recommend["tag"]}>
       <SwiperSkeleton
-        swiperSlides={profileList(recommend)}
+        swiperSlides={profileList(recommend, idx)}
         slidesPerView={slidesPerView}
       />
+      <p className="pc-caption mr-2 text-right">{`${recommend["tag"]}`}</p>
     </Tab.Panel>
   ));
   return <Tab.Panels>{panels.map((element) => element)}</Tab.Panels>;

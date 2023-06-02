@@ -5,6 +5,7 @@ import MiniStats from "./MiniStats";
 import { useEffect, useReducer, useState } from "react";
 import SelectList from "./Form/SelectList";
 import { defaultStats } from "~/utils/defaultconstant";
+import TraitBadge from "./TraitBadge";
 
 export default function CompareStats({
   playerTarget,
@@ -277,6 +278,14 @@ export default function CompareStats({
         playerNext={playerNextAdd}
         playerTarget={playerTargetAdd}
       />
+      <div className="flex justify-between basis-full gap-2">
+        <div className="basis-1/2">
+          <TraitBadge player={playerNext} />
+        </div>
+        <div className="basis-1/2">
+          <TraitBadge player={playerTarget} />
+        </div>
+      </div>
     </div>
   );
 }

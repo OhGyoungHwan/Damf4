@@ -2,14 +2,15 @@ import { player } from "~/utils/alltype";
 
 export default function TraitBadge({ player }: { player: player }) {
   return (
-    <>
+    <div className="flex flex-wrap flex-col sm:flex-row">
       {player["trait"].map((trait: string) => (
-        <span key={trait} className="mr-1 border-2 rounded-lg px-1 h-8">
-          <span className="text-gray-300 text-xs font-bold align-middle">
-            {trait}
-          </span>
-        </span>
+        <p
+          key={trait}
+          className="pc-h5 px-1 rounded-md border-2 border-gray-500 mx-1 text-center"
+        >
+          {trait}
+        </p>
       ))}
-    </>
+    </div>
   );
 }

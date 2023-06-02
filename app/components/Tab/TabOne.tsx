@@ -11,7 +11,7 @@ export default function TabOne({
   const tabClassname = "w-full focus:outline-none py-2 border-gray-800";
 
   switch (true) {
-    case categorie === "시즌" || categorie === "시즌신규":
+    case categorie === "시즌" || categorie === "신규 시즌":
       return (
         <Tab
           className={({ selected }) =>
@@ -21,10 +21,12 @@ export default function TabOne({
             )
           }
           key={tag}
+          aria-label={tag}
         >
           <img
-            className="h-7 mx-auto"
+            className="h-7 w-auto mx-auto"
             src={"/season/" + tag.toLowerCase() + ".png"}
+            alt={tag}
           />
         </Tab>
       );
@@ -34,10 +36,10 @@ export default function TabOne({
           className={({ selected }) =>
             classNames(
               tabClassname,
-              "text-center text-xs sm:text-sm font-semibold",
+              "text-center text-xs sm:text-sm font-semibold truncate",
               selected
                 ? "text-primary-light border-t-2 border-x-2"
-                : "text-gray-500 border-b-2"
+                : "text-gray-400 border-b-2"
             )
           }
           key={tag}
@@ -54,7 +56,7 @@ export default function TabOne({
               "text-center text-base font-semibold",
               selected
                 ? "text-primary-light border-t-2 border-x-2"
-                : "text-gray-500 border-b-2"
+                : "text-gray-400 border-b-2"
             )
           }
           key={tag}

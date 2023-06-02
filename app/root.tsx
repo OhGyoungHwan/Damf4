@@ -29,7 +29,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function App() {
   return (
-    <html>
+    <html lang="ko">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -108,17 +108,17 @@ export default function App() {
         <meta name="theme-color" content="#ffffff"></meta>
         <meta
           name="keywords"
-          content="Dampi, 피파4, 피파온라인4, 피온4, 피파 선수, 피파 유사 선수, 피파4 가성비, 피파4 선수평가, 피파4 스쿼드"
+          content="Damf4, 피파4, 피파온라인4, 피온4, 피파 선수, 피파 유사 선수, 피파4 가성비, 피파4 선수평가, 피파4 스쿼드"
         />
         <meta name="author" content="OhGyoungHwan" />
-        <meta name="og:site_name" content="Dampi" />
-        <meta name="og:title" content="Dampi" />
+        <meta name="og:site_name" content="Damf4" />
+        <meta name="og:title" content="Damf4" />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="" />
         <meta name="og:image" content="/thumbnail.png" />
         <meta name="twitter:image" content="/thumbnail.png" />
         <Meta />
-        <title>Dampi</title>
+        <title>Damf4</title>
         <Links />
       </head>
       <body>

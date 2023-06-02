@@ -13,7 +13,7 @@ function SwiperSkeleton({
   return (
     <Swiper
       slidesPerView={slidesPerView}
-      spaceBetween={0}
+      spaceBetween={2}
       className={"mySwiper"}
       onSwiper={(swiper) => setIsSwiper(true)}
     >

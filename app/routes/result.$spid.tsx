@@ -72,7 +72,12 @@ export default function searchRoute() {
           >
             {idx}
           </span>
-          <Profile player={player} isRole={player["role"]} isSwiper={true} />
+          <Profile
+            player={player}
+            isRole={player["role"]}
+            isSwiper={true}
+            isLaze={slidesPreView < idx}
+          />
         </div>
       </div>
     ))

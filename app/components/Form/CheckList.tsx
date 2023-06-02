@@ -42,6 +42,7 @@ export default memo(function CheckList({
                   checked.includes(option) ? "opacity-100" : "opacity-50"
                 )}
                 src={"/season/" + option.toLowerCase() + ".png"}
+                alt={option}
               />
             ) : (
               <div

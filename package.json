@@ -4,8 +4,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build",
-    "typecheck": "tsc"
+    "start": "set PORT=8080 && remix-serve build",
+    "typecheck": "tsc",
+    "deploy": "npm run build && gcloud app deploy"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

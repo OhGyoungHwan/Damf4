@@ -44,6 +44,7 @@ export default function MiniStats({
         <img
           className="h-4 mr-1"
           src={"/season/" + player["season"].toLowerCase() + ".png"}
+          alt={player["season"]}
         />
         <span className="pc-h4">{player["name"]}</span>
       </span>

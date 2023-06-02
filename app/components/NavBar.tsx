@@ -25,7 +25,7 @@ export default function NavBar({
           to="/"
           className="inline-block w-auto align-middle rounded-sm px-1 mx-5 text-primary-light font-black font-sans"
         >
-          Dampi
+          Damf4
         </Link>
       </div>
     );
@@ -65,7 +65,7 @@ export default function NavBar({
             to="/"
             className="hidden sm:inline-block w-auto align-middle rounded-sm px-1 text-primary-light font-black font-sans"
           >
-            Dampi
+            Damf4
           </Link>
         </div>
         {/* 페이지 이동 */}

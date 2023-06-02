@@ -34,6 +34,7 @@ export default function SearchInput({
         type="button"
         to={"/search/" + searchvalue}
         className={ClassNameLink}
+        aria-label="선수 검색"
       >
         <MagnifyingGlassIcon
           className="h-full w-6 stroke-2 inline-flex align-middle justify-center"

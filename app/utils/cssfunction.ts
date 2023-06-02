@@ -39,44 +39,44 @@ export function postionColor(postion: string, target: string) {
     case redPostion.includes(postion):
       switch (target) {
         case "text":
-          return "text-red-500";
+          return "text-red-600";
         case "border":
-          return "border-red-500";
+          return "border-red-600";
         case "bg":
-          return "bg-red-500";
+          return "bg-red-600";
         default:
           return "";
       }
     case greenPostion.includes(postion):
       switch (target) {
         case "text":
-          return "text-green-500";
+          return "text-green-600";
         case "border":
-          return "border-green-500";
+          return "border-green-600";
         case "bg":
-          return "bg-green-500";
+          return "bg-green-600";
         default:
           return "";
       }
     case bluePostion.includes(postion):
       switch (target) {
         case "text":
-          return "text-blue-500";
+          return "text-blue-600";
         case "border":
-          return "border-blue-500";
+          return "border-blue-600";
         case "bg":
-          return "bg-blue-500";
+          return "bg-blue-600";
         default:
           return "";
       }
     case orangePostion.includes(postion):
       switch (target) {
         case "text":
-          return "text-orange-500";
+          return "text-orange-600";
         case "border":
-          return "border-orange-500";
+          return "border-orange-600";
         case "bg":
-          return "bg-orange-500";
+          return "bg-orange-600";
         default:
           return "";
       }
