@@ -139,29 +139,56 @@ export default function CompareStats({
   }, [addStats]);
 
   useEffect(() => {
-    Object.keys(addStats).map((key) =>
-      updateAddStats({ type: key, value: {} })
+    Object.keys(addStats).map(
+      (key) => key.includes("next") && updateAddStats({ type: key, value: {} })
+    );
+    setPlayerNextAdd({ ...playerNext });
+  }, [playerNext]);
+
+  useEffect(() => {
+    Object.keys(addStats).map(
+      (key) =>
+        key.includes("target") && updateAddStats({ type: key, value: {} })
     );
     setPlayerTargetAdd({ ...playerTarget });
-    setPlayerNextAdd({ ...playerNext });
-  }, [playerNext, playerTarget]);
+  }, [playerTarget]);
 
   return (
     <div className="flex flex-wrap">
       <div className="flex flex-wrap justify-center sm:flex-nowrap basis-1/2 sm:flex-row overflow-hidden pointer-events-none">
-        <Profile player={playerTarget} isRole={""} isSwiper={false} />
+        <Profile
+          player={playerTarget}
+          isRole={""}
+          isSwiper={false}
+          isLaze={true}
+        />
         <MiniStats
           player={playerTarget}
           reversed={false}
           enforce={addStats.targetEnforce.id ?? 1}
+          ovrAdd={
+            (addStats.targetAdaptability.value ?? 0) +
+            (addStats.targetTeamcolor1.value ?? 0) +
+            (addStats.targetTeamcolor2.ability?.all ?? 0)
+          }
         />
       </div>
       <div className="flex flex-wrap justify-center sm:flex-nowrap basis-1/2 sm:flex-row-reverse overflow-hidden pointer-events-none">
-        <Profile player={playerNext} isRole={""} isSwiper={false} />
+        <Profile
+          player={playerNext}
+          isRole={""}
+          isSwiper={false}
+          isLaze={true}
+        />
         <MiniStats
           player={playerNext}
           reversed={true}
           enforce={addStats.nextEnforce.id ?? 1}
+          ovrAdd={
+            (addStats.nextAdaptability.value ?? 0) +
+            (addStats.nextTeamcolor1.value ?? 0) +
+            (addStats.nextTeamcolor2.ability?.all ?? 0)
+          }
         />
       </div>
       <div className="flex justify-between basis-full gap-2">

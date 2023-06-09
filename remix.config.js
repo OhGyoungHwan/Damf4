@@ -6,7 +6,12 @@ module.exports = {
   serverBuildPath: "build/index.js",
   publicPath: "/build/",
   serverModuleFormat: "cjs",
-  serverDependenciesToBundle: ["swiper", "swiper/react", "ssr-window"],
+  serverDependenciesToBundle: [
+    "swiper",
+    "swiper/react",
+    "ssr-window",
+    "react-fast-marquee",
+  ],
   tailwind: true,
   future: {
     v2_errorBoundary: true,

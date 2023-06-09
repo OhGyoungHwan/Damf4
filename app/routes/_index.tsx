@@ -8,6 +8,7 @@ import Footer from "~/components/Footer";
 import TabList from "~/components/Tab/TabList";
 import TabPanels from "~/components/Tab/TabPanels";
 import TabGroup from "~/components/Tab/TabGroup";
+import { getWindowWidth } from "~/utils/cssfunction";
 
 export const loader: LoaderFunction = async () => {
   const recommends = await getRecommend();
@@ -15,6 +16,7 @@ export const loader: LoaderFunction = async () => {
 };
 
 export default function Index() {
+  const windowWidth = getWindowWidth();
   const data: { recommends: recommend[] } = useLoaderData<typeof loader>();
   // recommend에서 categories항목 가져오기
   const categories = [
@@ -25,8 +27,18 @@ export default function Index() {
     const filteredRecommend = data.recommends.filter(
       (recommend) => recommend["categories"] === categorie
     );
-    const tabList = <TabList recommends={filteredRecommend} />;
-    const tabPanels = <TabPanels recommends={filteredRecommend} />;
+    const tabList = (
+      <TabList
+        recommends={filteredRecommend}
+        slidesPerView={windowWidth === 0 ? 0 : windowWidth > 640 ? 9.5 : 5.5}
+      />
+    );
+    const tabPanels = (
+      <TabPanels
+        recommends={filteredRecommend}
+        slidesPerView={windowWidth === 0 ? 0 : windowWidth > 640 ? 7.5 : 3.5}
+      />
+    );
     return {
       title: categorie,
       tabList: tabList,

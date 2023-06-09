@@ -6,10 +6,12 @@ export default function MiniStats({
   player,
   reversed,
   enforce,
+  ovrAdd,
 }: {
   player: player;
   reversed: boolean;
   enforce: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  ovrAdd: number;
 }) {
   const spanClass = classNames(
     "basis-full pc-h6 flex justify-center sm:justify-start items-center",
@@ -42,14 +44,16 @@ export default function MiniStats({
     <div className="flex flex-wrap leading-none py-1">
       <span className={spanClass}>
         <img
-          className="h-4 mr-1"
+          className="mr-1"
+          width={"20px"}
+          height={"16px"}
           src={"/season/" + player["season"].toLowerCase() + ".png"}
           alt={player["season"]}
         />
         <span className="pc-h4">{player["name"]}</span>
       </span>
       <span className={spanClass}>
-        <PostionBadge player={player} enforce={enforce} />
+        <PostionBadge player={player} enforce={enforce} ovrAdd={ovrAdd} />
       </span>
       <span className={spanClass}>
         <span>{`급여${player["pay"]}`}</span>&nbsp;

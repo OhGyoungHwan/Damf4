@@ -17,7 +17,7 @@ export default function Profile({
   const playerRole = isRole !== "" && (
     <div
       className={classNames(
-        "absolute text-xs rounded-md px-1 right-0 bottom-0 text-white",
+        "absolute text-xs rounded-md px-1 right-0 bottom-0 text-gray-50",
         postionColor(player["role"]?.toLocaleUpperCase() ?? "", "bg")
       )}
     >

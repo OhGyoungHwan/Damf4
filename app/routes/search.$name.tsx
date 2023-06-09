@@ -1,9 +1,29 @@
-import { json, LoaderArgs, LoaderFunction } from "@remix-run/node";
+import {
+  json,
+  LoaderArgs,
+  LoaderFunction,
+  V2_MetaFunction,
+} from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import CardPlayer from "~/components/CardPlayer";
 import { player } from "~/utils/alltype";
 import { classNames, getWindowWidth } from "~/utils/cssfunction";
 import { searchNamePlayers } from "~/utils/players.server";
+
+export const meta: V2_MetaFunction<typeof loader> = ({ data }) => {
+  const { description, title } = data
+    ? {
+        description: `"${data.players[0].name}"검색 결과입니다.`,
+        title: `"${data.players[0].name}"검색 결과`,
+      }
+    : { description: "알수없는 선수입니다.", title: "잘못된 검색" };
+
+  return [
+    { name: "description", content: description },
+    { name: "twitter:description", content: description },
+    { title },
+  ];
+};
 
 export const loader: LoaderFunction = async ({ params }: LoaderArgs) => {
   const players = await searchNamePlayers(params.name);

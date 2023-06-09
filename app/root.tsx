@@ -24,6 +24,7 @@ export const meta: V2_MetaFunction = () => {
     { name: "description", content: description },
     { name: "og:description", content: description },
     { name: "twitter:description", content: description },
+    { title: "Damf4" },
   ];
 };
 
@@ -118,7 +119,6 @@ export default function App() {
         <meta name="og:image" content="/thumbnail.png" />
         <meta name="twitter:image" content="/thumbnail.png" />
         <Meta />
-        <title>Damf4</title>
         <Links />
       </head>
       <body>

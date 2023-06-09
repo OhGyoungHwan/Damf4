@@ -17,7 +17,8 @@ export default function MarqueeDelay({
   };
   return (
     <Marquee speed={speed} onCycleComplete={handleCycleComplete}>
-      <span>{text}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>{text}</span>
+      <span className="invisible">{text}</span>
     </Marquee>
   );
 }

@@ -7,7 +7,7 @@ export default function Footer() {
           이메일 | okh5317797@gmail.com
         </p>
         <br />
-        <p className="pc-caption col-span-2 text-left">
+        <p className="pc-h6 col-span-2 text-left">
           'Dampi'는 비공식 웹사이트 입니다. EA Sports 및 NEXON의 승인을 받지
           않았으며, EA Sports 및 NEXON의 공식 의견이나 관리를 받지 않습니다.
           웹사이트 내에 포함된 피파온라인4와 관련된 이미지는 EASports 및 NEXON의

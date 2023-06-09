@@ -1,4 +1,5 @@
 import { memo, useState } from "react";
+import { Controller } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 function SwiperSkeleton({
@@ -15,9 +16,10 @@ function SwiperSkeleton({
       slidesPerView={slidesPerView}
       spaceBetween={2}
       className={"mySwiper"}
-      onSwiper={(swiper) => setIsSwiper(true)}
+      modules={[Controller]}
+      onSwiper={(e) => setIsSwiper(true)}
     >
-      {isSwiper ? (
+      {isSwiper && slidesPerView !== 0 ? (
         swiperSlides.map((slideItem: JSX.Element, idx: number) => (
           <SwiperSlide key={idx}>{slideItem}</SwiperSlide>
         ))

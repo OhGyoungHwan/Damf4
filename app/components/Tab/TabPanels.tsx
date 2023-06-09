@@ -3,10 +3,14 @@ import { recommend } from "~/utils/alltype";
 import SwiperSkeleton from "../SwiperSkeleton";
 import Profile from "../Profile";
 import { defaultPostions } from "~/utils/defaultconstant";
-import { getWindowWidth } from "~/utils/cssfunction";
 
-export default function TabPanels({ recommends }: { recommends: recommend[] }) {
-  const slidesPerView = getWindowWidth() > 640 ? 7.5 : 3.5;
+export default function TabPanels({
+  recommends,
+  slidesPerView,
+}: {
+  recommends: recommend[];
+  slidesPerView: number;
+}) {
   const profileList = (recommend: recommend, idx: number) =>
     recommend["players"]
       .sort((pre, next) => {
@@ -30,7 +34,7 @@ export default function TabPanels({ recommends }: { recommends: recommend[] }) {
         swiperSlides={profileList(recommend, idx)}
         slidesPerView={slidesPerView}
       />
-      <p className="pc-caption mr-2 text-right">{`${recommend["tag"]}`}</p>
+      <p className="pc-h6 mr-2 text-right">{`${recommend["tag"]}`}</p>
     </Tab.Panel>
   ));
   return <Tab.Panels>{panels.map((element) => element)}</Tab.Panels>;

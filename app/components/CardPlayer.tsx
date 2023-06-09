@@ -6,10 +6,10 @@ export default function CardPlayer({ player }: { player: player }) {
   return (
     <div className="flex justify-between rounded-md border-2 border-gray-800 p-2">
       <div className="basis-1/2">
-        <Profile player={player} isRole={""} isSwiper={false} isLaze={false} />
+        <Profile player={player} isRole={""} isSwiper={false} isLaze={true} />
       </div>
       <div className="basis-1/2">
-        <MiniStats player={player} reversed={false} enforce={1} />
+        <MiniStats player={player} reversed={false} enforce={1} ovrAdd={0} />
       </div>
     </div>
   );

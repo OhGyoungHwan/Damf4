@@ -24,7 +24,7 @@ export default function TabOne({
           aria-label={tag}
         >
           <img
-            className="h-7 w-auto mx-auto"
+            className="h-[28px] w-[35px] mx-auto"
             src={"/season/" + tag.toLowerCase() + ".png"}
             alt={tag}
           />

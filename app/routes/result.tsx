@@ -1,6 +1,17 @@
+import type { V2_MetaFunction } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
 import Footer from "~/components/Footer";
 import NavBar from "~/components/NavBar";
+
+export const meta: V2_MetaFunction = () => {
+  const description = "특정 선수를 검색완료 필터와 스텟비교를 해봅시다.";
+
+  return [
+    { name: "description", content: description },
+    { name: "twitter:description", content: description },
+    { title: "Damf4 | 검색 결과" },
+  ];
+};
 
 export default function Result() {
   return (
