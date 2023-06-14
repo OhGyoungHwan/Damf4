@@ -1,6 +1,7 @@
 import { engStats, playerPostion, postion } from "./alltype";
 
 export const defaultSeasons: Array<string> = [
+  "icontm",
   "icon",
   "nhd",
   "tki",
