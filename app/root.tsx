@@ -122,6 +122,25 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ZZREG3MMDL`}
+        />
+        <script
+          async
+          id="gtag-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-ZZREG3MMDL', {
+                  page_path: window.location.pathname,
+                });
+              `,
+          }}
+        />
         <CookiesProvider>
           <Outlet />
           <ScrollRestoration />
