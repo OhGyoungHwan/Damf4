@@ -18,13 +18,13 @@ export const links: LinksFunction = () => [
 
 export const meta: V2_MetaFunction = () => {
   const description =
-    "chatGPT 활용 피파온라인4 스텟 분포가 닮은 선수를 검색합니다.";
+    "피파온라인4 유사 선수 검색 사이트입니다. 머신러닝으로 분석한 유사 선수를 확인하세요";
 
   return [
     { name: "description", content: description },
     { name: "og:description", content: description },
     { name: "twitter:description", content: description },
-    { title: "Damf4" },
+    { title: "Damf4 - 피파온라인4 - 피파온라인4 유사 선수 검색" },
   ];
 };
 
@@ -109,15 +109,20 @@ export default function App() {
         <meta name="theme-color" content="#ffffff"></meta>
         <meta
           name="keywords"
-          content="Damf4, 피파4, 피파온라인4, 피온4, 피파 선수, 피파 유사 선수, 피파4 가성비, 피파4 선수평가, 피파4 스쿼드"
+          content="피파4, 피파온라인4, fifa4, 피파, 선수, 유사 선수, 닮은, 스쿼드, 팀컬러, 추천, 검색, 모바일, 인벤, 피파어딕트, 피파시티"
         />
+        <meta name="format-detection" content="no" />
         <meta name="author" content="OhGyoungHwan" />
         <meta name="og:site_name" content="Damf4" />
-        <meta name="og:title" content="Damf4" />
+        <meta
+          name="og:title"
+          content="Damf4 - 피파온라인4 - 피파온라인4 유사 선수 검색"
+        />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="" />
+        <meta name="og:url" content="https://damf4.com" />
         <meta name="og:image" content="/thumbnail.png" />
         <meta name="twitter:image" content="/thumbnail.png" />
+        <meta name="apple-mobile-web-app-title" content="dmaf4"></meta>
         <Meta />
         <Links />
       </head>

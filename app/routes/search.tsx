@@ -9,7 +9,7 @@ export const meta: V2_MetaFunction = () => {
   return [
     { name: "description", content: description },
     { name: "twitter:description", content: description },
-    { title: "Damf4 | 선수 검색" },
+    { title: "Damf4 - 피파온라인4 - 피파온라인4 유사 선수 검색 | 선수 검색" },
   ];
 };
 

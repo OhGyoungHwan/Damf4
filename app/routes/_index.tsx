@@ -52,13 +52,19 @@ export default function Index() {
         navigations={[{ name: "선수 검색", href: "/search", current: false }]}
       />
       <div className="w-full mt-14">
-        <div className="flex w-full h-[30vh] items-center">
+        <div className="flex flex-wrap w-full h-[30vh] items-center">
           <div className="flex w-full max-w-xs sm:max-w-sm h-12 justify-center mx-auto">
             <InputSearch
               ClassNameInput="text-gray-300 text-base pl-2 bg-gray-900 h-12 leading-none w-full rounded-l-md align-baseline placeholder:text-gray-500 focus:outline-none"
               ClassNameLink="text-primary-light px-2 bg-gray-900 h-12 rounded-r-md align-middle focus:outline-none"
             />
           </div>
+        </div>
+        <div className="w-full mb-2 sm:max-w-5xl mx-auto">
+          <span className="text-primary-light pc-h3">{"추천 선수 "}</span>
+          <span className="text-primary-base pc-caption">
+            클릭으로 한번에 찾는 60명 유사 선수
+          </span>
         </div>
         <div className="w-full sm:max-w-5xl mx-auto">
           {tabGrops.map((tabGrop, idx) => (

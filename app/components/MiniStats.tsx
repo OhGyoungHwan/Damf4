@@ -50,7 +50,7 @@ export default function MiniStats({
           src={"/season/" + player["season"].toLowerCase() + ".png"}
           alt={player["season"]}
         />
-        <span className="pc-h4">{player["name"]}</span>
+        <span className="pc-h5">{player["name"]}</span>
       </span>
       <span className={spanClass}>
         <PostionBadge player={player} enforce={enforce} ovrAdd={ovrAdd} />

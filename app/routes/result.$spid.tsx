@@ -112,6 +112,9 @@ export default function searchRoute() {
         }
         onClick={(e) => setIsFilter(false)}
       ></div>
+      <div className="flex w-full text-gray-300 justify-center mx-auto">
+        <h3>가장 유사한 선수 60명 머신러닝 분석완료! 좌우로 넘겨 보세요</h3>
+      </div>
       {/* 결과 swiper Filter확장버튼 */}
       <div className="my-4 relative">
         <SwiperSkeleton
